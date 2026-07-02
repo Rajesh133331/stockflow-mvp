@@ -17,3 +17,30 @@
 .dashboard-content p {
     color: #666;
 }
+
+.dashboard-layout {
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 30px;
+    background: #f7f8fc;
+}
+
+.dashboard-content h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.welcome-text {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.summary-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}

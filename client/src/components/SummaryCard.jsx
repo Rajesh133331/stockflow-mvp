@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const SummaryCard = () => {
+import "../styles/SummaryCard.css";
+
+const SummaryCard = ({ title, value }) => {
   return (
-    <div>SummaryCard</div>
-  )
-}
+    <div className="summary-card">
+      <p className="card-title">{title}</p>
 
-export default SummaryCard
+      <h2 className="card-value">{value}</h2>
+    </div>
+  );
+};
+
+export default SummaryCard;
