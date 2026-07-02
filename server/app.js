@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import { sequelize } from "./models/index.js";
 import authRoutes from "./routes/authRoutes.js";
+import productRoutes from "./routes/productRoutes.js";
 
 dotenv.config();
 
@@ -13,6 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
+app.use("/api/products", productRoutes);
 
 app.get("/", (req, res) => {
   res.send("StockFlow Backend Running...");
