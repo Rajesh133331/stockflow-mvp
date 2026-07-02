@@ -1,6 +1,7 @@
 import React from "react";
 
 import "../styles/ProductTable.css";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -63,9 +64,24 @@ const ProductTable = () => {
               </td>
 
               <td>
-                <button className="edit-btn">Edit</button>
+                <Link to={`/products/edit/${product.id}`} className="edit-btn">
+                  Edit
+                </Link>
 
-                <button className="delete-btn">Delete</button>
+                <button
+                  className="delete-btn"
+                  onClick={() => {
+                    const confirmDelete = window.confirm(
+                      "Are you sure you want to delete this product?",
+                    );
+
+                    if (confirmDelete) {
+                      alert("Product deleted successfully.");
+                    }
+                  }}
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))}
