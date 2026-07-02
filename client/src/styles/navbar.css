@@ -1,0 +1,44 @@
+
+
+.navbar {
+    height: 70px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar-logo h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #111;
+}
+
+.navbar-logo span {
+    color: #D72638;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.organization-name {
+    color: #555;
+    font-weight: 500;
+}
+
+.profile-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #D72638;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
