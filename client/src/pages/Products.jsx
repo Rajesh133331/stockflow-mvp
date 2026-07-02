@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import ProductTable from "../components/ProductTable";
+import { Link } from "react-router-dom";
 
 import "../styles/Products.css";
 
@@ -21,7 +22,9 @@ const Products = () => {
               <p>Manage your inventory products.</p>
             </div>
 
-            <button className="add-product-btn">+ Add Product</button>
+            <Link to="/products/add" className="add-product-btn">
+              + Add Product
+            </Link>
           </div>
 
           <div className="search-container">
