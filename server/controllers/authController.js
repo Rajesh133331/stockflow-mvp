@@ -1,0 +1,49 @@
+import bcrypt from "bcrypt";
+import { Organization, User } from "../models/index.js";
+
+export const signup = async (req, res) => {
+  try {
+    const { organizationName, email, password } = req.body;
+
+    if (!organizationName || !email || !password) {
+      return res.status(400).json({
+        message: "All fields are required.",
+      });
+    }
+
+    const existingUser = await User.findOne({
+      where: {
+        email,
+      },
+    });
+
+    if (existingUser) {
+      return res.status(400).json({
+        message: "Email already exists.",
+      });
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const organization = await Organization.create({
+      organizationName,
+    });
+
+    const user = await User.create({
+      email,
+      password: hashedPassword,
+      organizationId: organization.id,
+    });
+
+    res.status(201).json({
+      message: "User registered successfully.",
+      user,
+    });
+  } catch (error) {
+    console.log(error);
+
+    res.status(500).json({
+      message: "Internal server error.",
+    });
+  }
+};
