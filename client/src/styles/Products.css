@@ -1,0 +1,44 @@
+.products-layout{
+    display:flex;
+}
+
+.products-content{
+    flex:1;
+    padding:30px;
+    background:#f7f8fc;
+}
+
+.products-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.products-header h1{
+    font-size:30px;
+}
+
+.products-header p{
+    color:#666;
+}
+
+.add-product-btn{
+    background:#D72638;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.search-container{
+    margin-bottom:25px;
+}
+
+.search-container input{
+    width:350px;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
