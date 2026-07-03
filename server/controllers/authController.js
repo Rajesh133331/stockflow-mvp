@@ -63,7 +63,9 @@ export const login = async (req, res) => {
     }
 
    const user = await User.findOne({
-     where: { email },
+     where: {
+       email,
+     },
      include: [
        {
          model: Organization,
@@ -91,7 +93,7 @@ export const login = async (req, res) => {
     res.status(200).json({
       message: "Login successful.",
       token,
-      organizationName: user.organizationName,
+      organizationName: user.Organization.organizationName,
     });
   } catch (error) {
     console.log(error);
