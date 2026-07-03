@@ -55,3 +55,14 @@
 .save-btn:hover {
     background: #c21f30;
 }
+
+.error-message {
+  color: red;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.save-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
