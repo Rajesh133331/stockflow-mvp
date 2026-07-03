@@ -7,6 +7,7 @@ import Products from "../pages/Products";
 import AddProduct from "../pages/AddProduct";
 import EditProduct from "../pages/EditProduct";
 import Settings from "../pages/Settings";
+import ProtectedRoute from "../components/ProtectedRoute";
 
 const AppRoutes = () => {
   return (
@@ -14,11 +15,18 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/products/add" element={<AddProduct />} />
-        <Route path="/products/edit/:id" element={<EditProduct />} />
-        <Route path="/settings" element={<Settings />} />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/products" element={<ProtectedRoute><Products /></ProtectedRoute>} />
+        <Route path="/products/add" element={<ProtectedRoute><AddProduct /></ProtectedRoute>} />
+        <Route path="/products/edit/:id" element={<ProtectedRoute><EditProduct /></ProtectedRoute>} />
+        <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
       </Routes>
     </BrowserRouter>
   );

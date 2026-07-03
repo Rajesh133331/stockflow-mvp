@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 
 import "../styles/navbar.css";
 
@@ -14,9 +15,7 @@ const Navbar = () => {
       <div className="navbar-right">
         <p className="organization-name">My Test Store</p>
 
-        <div className="profile-avatar">
-          R
-        </div>
+        <div className="profile-avatar">R</div>
       </div>
     </header>
   );
