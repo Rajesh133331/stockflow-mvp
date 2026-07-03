@@ -2,31 +2,7 @@ import React from "react";
 
 import "../styles/LowStockTable.css";
 
-const lowStockProducts = [
-  {
-    id: 1,
-    name: "Wireless Mouse",
-    sku: "WM-101",
-    quantity: 3,
-    threshold: 5,
-  },
-  {
-    id: 2,
-    name: "Mechanical Keyboard",
-    sku: "MK-205",
-    quantity: 2,
-    threshold: 5,
-  },
-  {
-    id: 3,
-    name: "USB Hub",
-    sku: "UH-310",
-    quantity: 4,
-    threshold: 5,
-  },
-];
-
-const LowStockTable = () => {
+const LowStockTable = ({ products }) => {
   return (
     <div className="low-stock-card">
       <h2>Low Stock Items</h2>
@@ -42,14 +18,22 @@ const LowStockTable = () => {
         </thead>
 
         <tbody>
-          {lowStockProducts.map((product) => (
-            <tr key={product.id}>
-              <td>{product.name}</td>
-              <td>{product.sku}</td>
-              <td>{product.quantity}</td>
-              <td>{product.threshold}</td>
+          {products.length > 0 ? (
+            products.map((product) => (
+              <tr key={product.id}>
+                <td>{product.name}</td>
+                <td>{product.sku}</td>
+                <td>{product.quantityOnHand}</td>
+                <td>{product.lowStockThreshold}</td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="4" style={{ textAlign: "center" }}>
+                No low stock products.
+              </td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
     </div>
