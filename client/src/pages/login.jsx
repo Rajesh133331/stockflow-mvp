@@ -41,6 +41,7 @@ const Login = () => {
       });
 
       localStorage.setItem("token", response.data.token);
+      console.log(response.data.organizationName);
       localStorage.setItem("organizationName", response.data.organizationName);
 
       navigate("/dashboard");
