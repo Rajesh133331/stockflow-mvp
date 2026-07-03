@@ -4,7 +4,7 @@ import { useNavigate} from "react-router-dom";
 import api from "../api/api";
 
 import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/sidebar";
 
 import "../styles/AddProduct.css";
 import "../styles/dashboard.css";

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import api from "../api/api";
 import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/sidebar";
 
 import "../styles/dashboard.css";
 import "../styles/settings.css";

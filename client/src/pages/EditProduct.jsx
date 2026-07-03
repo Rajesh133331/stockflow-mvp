@@ -5,9 +5,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import api from "../api/api";
 
 import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/sidebar";
 
-import "../styles/Dashboard.css";
+import "../styles/dashboard.css";
 import "../styles/AddProduct.css";
 
 const EditProduct = () => {
