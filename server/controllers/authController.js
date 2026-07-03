@@ -62,11 +62,15 @@ export const login = async (req, res) => {
       });
     }
 
-    const user = await User.findOne({
-      where: {
-        email,
-      },
-    });
+   const user = await User.findOne({
+     where: { email },
+     include: [
+       {
+         model: Organization,
+         attributes: ["organizationName"],
+       },
+     ],
+   });
 
     if (!user) {
       return res.status(404).json({
