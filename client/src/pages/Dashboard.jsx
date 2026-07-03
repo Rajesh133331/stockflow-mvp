@@ -3,11 +3,11 @@ import React, { useEffect, useState } from "react";
 import api from "../api/api";
 
 import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/sidebar";
 import SummaryCard from "../components/SummaryCard";
 import LowStockTable from "../components/LowStockTable";
 
-import "../styles/Dashboard.css";
+import "../styles/dashboard.css";
 
 const Dashboard = () => {
     const [dashboardData, setDashboardData] = useState({
