@@ -3,8 +3,8 @@ import api from "../api/api";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 
-import "../styles/Dashboard.css";
-import "../styles/Settings.css";
+import "../styles/dashboard.css";
+import "../styles/settings.css";
 import "../styles/AddProduct.css";
 
 const Settings = () => {
