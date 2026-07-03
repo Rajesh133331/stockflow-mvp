@@ -1,13 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Login from "../pages/Login";
-import Signup from "../pages/Signup";
+import Login from "../pages/login";
+import Signup from "../pages/signup";
 import Dashboard from "../pages/Dashboard";
 import Products from "../pages/Products";
 import AddProduct from "../pages/AddProduct";
 import EditProduct from "../pages/EditProduct";
 import Settings from "../pages/Settings";
-import ProtectedRoute from "../components/ProtectedRoute";
 
 const AppRoutes = () => {
   return (
