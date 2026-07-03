@@ -3,6 +3,7 @@ import sequelize from "../config/database.js";
 import Organization from "./Organization.js";
 import User from "./User.js";
 import Product from "./Product.js";
+import Settings from "./Settings.js";
 
 //relation between organization and user
 
@@ -29,4 +30,13 @@ Product.belongsTo(Organization, {
   foreignKey: "organizationId",
 });
 
-export { sequelize, Organization, User, Product };
+Organization.hasOne(Settings, {
+  foreignKey: "organizationId",
+  onDelete: "CASCADE",
+});
+
+Settings.belongsTo(Organization, {
+  foreignKey: "organizationId",
+});
+
+export { sequelize, Organization, User, Product , Settings};

@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.signup-page {
+    display: flex;
+    min-height: 100vh;
+}
+
+.signup-left {
+    width: 45%;
+    background: #FFE4DE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+}
+
+.brand {
+    font-size: 40px;
+    color: #111;
+    margin-bottom: 60px;
+}
+
+.brand span {
+    color: #D72638;
+}
+
+.hero-text h2 {
+    font-size: 42px;
+    line-height: 1.4;
+    margin-bottom: 25px;
+    color: #111;
+}
+
+.hero-text h2 span {
+    color: #D72638;
+}
+
+.hero-text p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.8;
+    max-width: 480px;
+}
+
+.signup-right {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    padding: 40px;
+}
+
+.signup-card {
+    width: 100%;
+    max-width: 470px;
+}
+
+.signup-card h1 {
+    font-size: 32px;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #D72638;
+}
+
+.terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.terms input {
+    margin-top: 3px;
+}
+
+.terms label {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.terms a {
+    color: #D72638;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #D72638;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-btn:hover {
+    background: #be2030;
+}
+
+.login-text {
+    text-align: center;
+    margin-top: 25px;
+    color: #555;
+}
+
+.login-text a {
+    color: #D72638;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.signup-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
