@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 
 import "../styles/Dashboard.css";
-import "../styles/settings.css";
+import "../styles/Settings.css";
 import "../styles/AddProduct.css";
 
 const Settings = () => {
