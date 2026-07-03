@@ -5,7 +5,7 @@ import api from "../api/api";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/sidebar";
 import SummaryCard from "../components/SummaryCard";
-import LowStockTable from "../components/LowStockTable";
+import LowStockTable from "../components/LowStocktable";
 
 import "../styles/dashboard.css";
 
