@@ -1,9 +1,11 @@
-import React from 'react'
-import { useNavigate } from "react-router-dom";
+import React from "react";
 
 import "../styles/navbar.css";
 
 const Navbar = () => {
+  const organizationName =
+    localStorage.getItem("organizationName") || "Organization";
+
   return (
     <header className="navbar">
       <div className="navbar-logo">
@@ -13,9 +15,11 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-right">
-        <p className="organization-name">My Test Store</p>
+        <p className="organization-name">{organizationName}</p>
 
-        <div className="profile-avatar">R</div>
+        <div className="profile-avatar">
+          {organizationName.charAt(0).toUpperCase()}
+        </div>
       </div>
     </header>
   );

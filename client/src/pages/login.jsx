@@ -41,6 +41,7 @@ const Login = () => {
       });
 
       localStorage.setItem("token", response.data.token);
+      localStorage.setItem("organizationName", response.data.organizationName);
 
       navigate("/dashboard");
     } catch (err) {
