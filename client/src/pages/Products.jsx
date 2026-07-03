@@ -52,8 +52,6 @@ const Products = () => {
      fetchProducts();
    }, []);
    const filteredProducts = products.filter((product) => {
-    console.log(products);
-    console.log(filteredProducts);
      return (
        product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
        product.sku.toLowerCase().includes(searchTerm.toLowerCase())
