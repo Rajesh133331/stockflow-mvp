@@ -14,6 +14,7 @@ const Products = () => {
     const [loading, setLoading] = useState(true);
 
     const [error, setError] = useState("");
+    const [searchTerm, setSearchTerm] = useState("");
    const fetchProducts = async () => {
      try {
        setLoading(true);
@@ -50,6 +51,12 @@ const Products = () => {
    useEffect(() => {
      fetchProducts();
    }, []);
+   const filteredProducts = products.filter((product) => {
+     return (
+       product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+       product.sku.toLowerCase().includes(searchTerm.toLowerCase())
+     );
+   });
     if (loading) {
       return <h2>Loading Products...</h2>;
     }
@@ -76,10 +83,15 @@ const Products = () => {
           </div>
 
           <div className="search-container">
-            <input type="text" placeholder="Search by Product Name or SKU" />
+            <input
+              type="text"
+              placeholder="Search by Product Name or SKU"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
           </div>
 
-          <ProductTable products={products} onDelete={handleDelete} />
+          <ProductTable products={filteredProducts} onDelete={handleDelete} />
         </main>
       </div>
     </>
